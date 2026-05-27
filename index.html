@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="css/leaflet-measure.css">
         <style>
         #map {
-            width: 1290px;
+            width: 1206px;
             height: 734px;
         }
         </style>
@@ -37,12 +37,33 @@
         <script src="js/labels.js"></script>
         <script src="js/leaflet.photon.js"></script>
         <script src="js/leaflet-measure.js"></script>
-        <script src="data/D2DFilteredGeo_1.js"></script>
-        <script src="data/LakeRonkonkomaNYUSA104216_2.js"></script>
+        <script src="data/MergedTerritory_1.js"></script>
+        <script src="data/territory_1_B_2.js"></script>
+        <script src="data/territory_2_B_3.js"></script>
+        <script src="data/territory_8_B_4.js"></script>
+        <script src="data/territory_9_B_5.js"></script>
+        <script src="data/territory_10_B_6.js"></script>
+        <script src="data/territory_11_B_7.js"></script>
+        <script src="data/territory_12_B_8.js"></script>
+        <script src="data/territory_13_B_9.js"></script>
+        <script src="data/territory_14_B_10.js"></script>
+        <script src="data/territory_15_B_11.js"></script>
+        <script src="data/territory_16_B_12.js"></script>
+        <script src="data/territory_17_B_13.js"></script>
+        <script src="data/territory_18a_B_14.js"></script>
+        <script src="data/territory_18b_B_15.js"></script>
+        <script src="data/territory_19_B_16.js"></script>
+        <script src="data/territory_20_B_17.js"></script>
+        <script src="data/territory_21a_B_18.js"></script>
+        <script src="data/territory_21b_B_19.js"></script>
+        <script src="data/territory_21c_B_20.js"></script>
+        <script src="data/territory_22a_B_21.js"></script>
+        <script src="data/territory_22b_B_22.js"></script>
+        <script src="data/LakeRonkonkomaNYUSA104216_23.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[40.82398877749012,-73.11720544710275],[40.84034884540795,-73.08841887950962]]);
+        }).fitBounds([[40.852491984920924,-73.13771744373038],[40.87757363030021,-73.09646293411744]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/qgis2web/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -135,34 +156,34 @@
         });
         layer_GoogleMaps_0;
         map.addLayer(layer_GoogleMaps_0);
-        function pop_D2DFilteredGeo_1(feature, layer) {
+        function pop_MergedTerritory_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="fid" colspan="2"><strong>fid</strong><br />' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['number'] !== null ? autolinker.link(String(feature.properties['number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="number" colspan="2"><strong>number</strong><br />' + (feature.properties['number'] !== null ? autolinker.link(String(feature.properties['number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="locality" colspan="2"><strong>locality</strong><br />' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="business" colspan="2"><strong>business</strong><br />' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="notes" colspan="2"><strong>notes</strong><br />' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="disabled" colspan="2"><strong>disabled</strong><br />' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="tags" colspan="2"><strong>tags</strong><br />' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="layer" colspan="2"><strong>layer</strong><br />' + (feature.properties['layer'] !== null ? autolinker.link(String(feature.properties['layer']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="path" colspan="2"><strong>path</strong><br />' + (feature.properties['path'] !== null ? autolinker.link(String(feature.properties['path']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -172,9 +193,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_D2DFilteredGeo_1_0() {
+        function style_MergedTerritory_1_0() {
             return {
-                pane: 'pane_D2DFilteredGeo_1',
+                pane: 'pane_MergedTerritory_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -183,25 +204,1222 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(231,113,72,0.14901960784313725)',
-                interactive: false,
+                fillColor: 'rgba(231,111,4,0.14901960784313725)',
+                interactive: true,
             }
         }
-        map.createPane('pane_D2DFilteredGeo_1');
-        map.getPane('pane_D2DFilteredGeo_1').style.zIndex = 401;
-        map.getPane('pane_D2DFilteredGeo_1').style['mix-blend-mode'] = 'normal';
-        var layer_D2DFilteredGeo_1 = new L.geoJson(json_D2DFilteredGeo_1, {
+        map.createPane('pane_MergedTerritory_1');
+        map.getPane('pane_MergedTerritory_1').style.zIndex = 401;
+        map.getPane('pane_MergedTerritory_1').style['mix-blend-mode'] = 'normal';
+        var layer_MergedTerritory_1 = new L.geoJson(json_MergedTerritory_1, {
             attribution: '',
-            interactive: false,
-            dataVar: 'json_D2DFilteredGeo_1',
-            layerName: 'layer_D2DFilteredGeo_1',
-            pane: 'pane_D2DFilteredGeo_1',
-            onEachFeature: pop_D2DFilteredGeo_1,
-            style: style_D2DFilteredGeo_1_0,
+            interactive: true,
+            dataVar: 'json_MergedTerritory_1',
+            layerName: 'layer_MergedTerritory_1',
+            pane: 'pane_MergedTerritory_1',
+            onEachFeature: pop_MergedTerritory_1,
+            style: style_MergedTerritory_1_0,
         });
-        bounds_group.addLayer(layer_D2DFilteredGeo_1);
-        map.addLayer(layer_D2DFilteredGeo_1);
-        function pop_LakeRonkonkomaNYUSA104216_2(feature, layer) {
+        bounds_group.addLayer(layer_MergedTerritory_1);
+        map.addLayer(layer_MergedTerritory_1);
+        function pop_territory_1_B_2(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>number</strong><br />' + (feature.properties['number'] !== null ? autolinker.link(String(feature.properties['number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>locality</strong><br />' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>business</strong><br />' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>notes</strong><br />' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>disabled</strong><br />' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>tags</strong><br />' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_territory_1_B_2_0() {
+            return {
+                pane: 'pane_territory_1_B_2',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(51,90,225,0.10196078431372549)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_territory_1_B_2');
+        map.getPane('pane_territory_1_B_2').style.zIndex = 402;
+        map.getPane('pane_territory_1_B_2').style['mix-blend-mode'] = 'normal';
+        var layer_territory_1_B_2 = new L.geoJson(json_territory_1_B_2, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_territory_1_B_2',
+            layerName: 'layer_territory_1_B_2',
+            pane: 'pane_territory_1_B_2',
+            onEachFeature: pop_territory_1_B_2,
+            style: style_territory_1_B_2_0,
+        });
+        bounds_group.addLayer(layer_territory_1_B_2);
+        map.addLayer(layer_territory_1_B_2);
+        function pop_territory_2_B_3(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>number</strong><br />' + (feature.properties['number'] !== null ? autolinker.link(String(feature.properties['number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>locality</strong><br />' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>business</strong><br />' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>notes</strong><br />' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>disabled</strong><br />' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>tags</strong><br />' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_territory_2_B_3_0() {
+            return {
+                pane: 'pane_territory_2_B_3',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(51,90,225,0.10196078431372549)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_territory_2_B_3');
+        map.getPane('pane_territory_2_B_3').style.zIndex = 403;
+        map.getPane('pane_territory_2_B_3').style['mix-blend-mode'] = 'normal';
+        var layer_territory_2_B_3 = new L.geoJson(json_territory_2_B_3, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_territory_2_B_3',
+            layerName: 'layer_territory_2_B_3',
+            pane: 'pane_territory_2_B_3',
+            onEachFeature: pop_territory_2_B_3,
+            style: style_territory_2_B_3_0,
+        });
+        bounds_group.addLayer(layer_territory_2_B_3);
+        map.addLayer(layer_territory_2_B_3);
+        function pop_territory_8_B_4(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>number</strong><br />' + (feature.properties['number'] !== null ? autolinker.link(String(feature.properties['number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>locality</strong><br />' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>business</strong><br />' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>notes</strong><br />' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>disabled</strong><br />' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>tags</strong><br />' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_territory_8_B_4_0() {
+            return {
+                pane: 'pane_territory_8_B_4',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(51,90,225,0.10196078431372549)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_territory_8_B_4');
+        map.getPane('pane_territory_8_B_4').style.zIndex = 404;
+        map.getPane('pane_territory_8_B_4').style['mix-blend-mode'] = 'normal';
+        var layer_territory_8_B_4 = new L.geoJson(json_territory_8_B_4, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_territory_8_B_4',
+            layerName: 'layer_territory_8_B_4',
+            pane: 'pane_territory_8_B_4',
+            onEachFeature: pop_territory_8_B_4,
+            style: style_territory_8_B_4_0,
+        });
+        bounds_group.addLayer(layer_territory_8_B_4);
+        map.addLayer(layer_territory_8_B_4);
+        function pop_territory_9_B_5(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>number</strong><br />' + (feature.properties['number'] !== null ? autolinker.link(String(feature.properties['number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>locality</strong><br />' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>business</strong><br />' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>notes</strong><br />' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>disabled</strong><br />' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>tags</strong><br />' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_territory_9_B_5_0() {
+            return {
+                pane: 'pane_territory_9_B_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(51,90,225,0.10196078431372549)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_territory_9_B_5');
+        map.getPane('pane_territory_9_B_5').style.zIndex = 405;
+        map.getPane('pane_territory_9_B_5').style['mix-blend-mode'] = 'normal';
+        var layer_territory_9_B_5 = new L.geoJson(json_territory_9_B_5, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_territory_9_B_5',
+            layerName: 'layer_territory_9_B_5',
+            pane: 'pane_territory_9_B_5',
+            onEachFeature: pop_territory_9_B_5,
+            style: style_territory_9_B_5_0,
+        });
+        bounds_group.addLayer(layer_territory_9_B_5);
+        map.addLayer(layer_territory_9_B_5);
+        function pop_territory_10_B_6(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>number</strong><br />' + (feature.properties['number'] !== null ? autolinker.link(String(feature.properties['number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>locality</strong><br />' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>business</strong><br />' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>notes</strong><br />' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>disabled</strong><br />' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>tags</strong><br />' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_territory_10_B_6_0() {
+            return {
+                pane: 'pane_territory_10_B_6',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(51,90,225,0.10196078431372549)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_territory_10_B_6');
+        map.getPane('pane_territory_10_B_6').style.zIndex = 406;
+        map.getPane('pane_territory_10_B_6').style['mix-blend-mode'] = 'normal';
+        var layer_territory_10_B_6 = new L.geoJson(json_territory_10_B_6, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_territory_10_B_6',
+            layerName: 'layer_territory_10_B_6',
+            pane: 'pane_territory_10_B_6',
+            onEachFeature: pop_territory_10_B_6,
+            style: style_territory_10_B_6_0,
+        });
+        bounds_group.addLayer(layer_territory_10_B_6);
+        map.addLayer(layer_territory_10_B_6);
+        function pop_territory_11_B_7(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>number</strong><br />' + (feature.properties['number'] !== null ? autolinker.link(String(feature.properties['number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>locality</strong><br />' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>business</strong><br />' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>notes</strong><br />' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>disabled</strong><br />' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>tags</strong><br />' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_territory_11_B_7_0() {
+            return {
+                pane: 'pane_territory_11_B_7',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(51,90,225,0.10196078431372549)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_territory_11_B_7');
+        map.getPane('pane_territory_11_B_7').style.zIndex = 407;
+        map.getPane('pane_territory_11_B_7').style['mix-blend-mode'] = 'normal';
+        var layer_territory_11_B_7 = new L.geoJson(json_territory_11_B_7, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_territory_11_B_7',
+            layerName: 'layer_territory_11_B_7',
+            pane: 'pane_territory_11_B_7',
+            onEachFeature: pop_territory_11_B_7,
+            style: style_territory_11_B_7_0,
+        });
+        bounds_group.addLayer(layer_territory_11_B_7);
+        map.addLayer(layer_territory_11_B_7);
+        function pop_territory_12_B_8(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>number</strong><br />' + (feature.properties['number'] !== null ? autolinker.link(String(feature.properties['number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>locality</strong><br />' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>business</strong><br />' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>notes</strong><br />' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>disabled</strong><br />' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>tags</strong><br />' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_territory_12_B_8_0() {
+            return {
+                pane: 'pane_territory_12_B_8',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(51,90,225,0.10196078431372549)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_territory_12_B_8');
+        map.getPane('pane_territory_12_B_8').style.zIndex = 408;
+        map.getPane('pane_territory_12_B_8').style['mix-blend-mode'] = 'normal';
+        var layer_territory_12_B_8 = new L.geoJson(json_territory_12_B_8, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_territory_12_B_8',
+            layerName: 'layer_territory_12_B_8',
+            pane: 'pane_territory_12_B_8',
+            onEachFeature: pop_territory_12_B_8,
+            style: style_territory_12_B_8_0,
+        });
+        bounds_group.addLayer(layer_territory_12_B_8);
+        map.addLayer(layer_territory_12_B_8);
+        function pop_territory_13_B_9(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>number</strong><br />' + (feature.properties['number'] !== null ? autolinker.link(String(feature.properties['number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>locality</strong><br />' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>business</strong><br />' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>notes</strong><br />' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>disabled</strong><br />' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>tags</strong><br />' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_territory_13_B_9_0() {
+            return {
+                pane: 'pane_territory_13_B_9',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(51,90,225,0.10196078431372549)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_territory_13_B_9');
+        map.getPane('pane_territory_13_B_9').style.zIndex = 409;
+        map.getPane('pane_territory_13_B_9').style['mix-blend-mode'] = 'normal';
+        var layer_territory_13_B_9 = new L.geoJson(json_territory_13_B_9, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_territory_13_B_9',
+            layerName: 'layer_territory_13_B_9',
+            pane: 'pane_territory_13_B_9',
+            onEachFeature: pop_territory_13_B_9,
+            style: style_territory_13_B_9_0,
+        });
+        bounds_group.addLayer(layer_territory_13_B_9);
+        map.addLayer(layer_territory_13_B_9);
+        function pop_territory_14_B_10(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>number</strong><br />' + (feature.properties['number'] !== null ? autolinker.link(String(feature.properties['number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>locality</strong><br />' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>business</strong><br />' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>notes</strong><br />' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>disabled</strong><br />' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>tags</strong><br />' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_territory_14_B_10_0() {
+            return {
+                pane: 'pane_territory_14_B_10',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(51,90,225,0.10196078431372549)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_territory_14_B_10');
+        map.getPane('pane_territory_14_B_10').style.zIndex = 410;
+        map.getPane('pane_territory_14_B_10').style['mix-blend-mode'] = 'normal';
+        var layer_territory_14_B_10 = new L.geoJson(json_territory_14_B_10, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_territory_14_B_10',
+            layerName: 'layer_territory_14_B_10',
+            pane: 'pane_territory_14_B_10',
+            onEachFeature: pop_territory_14_B_10,
+            style: style_territory_14_B_10_0,
+        });
+        bounds_group.addLayer(layer_territory_14_B_10);
+        map.addLayer(layer_territory_14_B_10);
+        function pop_territory_15_B_11(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>number</strong><br />' + (feature.properties['number'] !== null ? autolinker.link(String(feature.properties['number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>locality</strong><br />' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>business</strong><br />' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>notes</strong><br />' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>disabled</strong><br />' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>tags</strong><br />' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_territory_15_B_11_0() {
+            return {
+                pane: 'pane_territory_15_B_11',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(51,90,225,0.10196078431372549)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_territory_15_B_11');
+        map.getPane('pane_territory_15_B_11').style.zIndex = 411;
+        map.getPane('pane_territory_15_B_11').style['mix-blend-mode'] = 'normal';
+        var layer_territory_15_B_11 = new L.geoJson(json_territory_15_B_11, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_territory_15_B_11',
+            layerName: 'layer_territory_15_B_11',
+            pane: 'pane_territory_15_B_11',
+            onEachFeature: pop_territory_15_B_11,
+            style: style_territory_15_B_11_0,
+        });
+        bounds_group.addLayer(layer_territory_15_B_11);
+        map.addLayer(layer_territory_15_B_11);
+        function pop_territory_16_B_12(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>number</strong><br />' + (feature.properties['number'] !== null ? autolinker.link(String(feature.properties['number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>locality</strong><br />' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>business</strong><br />' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>notes</strong><br />' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>disabled</strong><br />' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>tags</strong><br />' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_territory_16_B_12_0() {
+            return {
+                pane: 'pane_territory_16_B_12',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(51,90,225,0.10196078431372549)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_territory_16_B_12');
+        map.getPane('pane_territory_16_B_12').style.zIndex = 412;
+        map.getPane('pane_territory_16_B_12').style['mix-blend-mode'] = 'normal';
+        var layer_territory_16_B_12 = new L.geoJson(json_territory_16_B_12, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_territory_16_B_12',
+            layerName: 'layer_territory_16_B_12',
+            pane: 'pane_territory_16_B_12',
+            onEachFeature: pop_territory_16_B_12,
+            style: style_territory_16_B_12_0,
+        });
+        bounds_group.addLayer(layer_territory_16_B_12);
+        map.addLayer(layer_territory_16_B_12);
+        function pop_territory_17_B_13(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>number</strong><br />' + (feature.properties['number'] !== null ? autolinker.link(String(feature.properties['number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>locality</strong><br />' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>business</strong><br />' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>notes</strong><br />' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>disabled</strong><br />' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>tags</strong><br />' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_territory_17_B_13_0() {
+            return {
+                pane: 'pane_territory_17_B_13',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(51,90,225,0.10196078431372549)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_territory_17_B_13');
+        map.getPane('pane_territory_17_B_13').style.zIndex = 413;
+        map.getPane('pane_territory_17_B_13').style['mix-blend-mode'] = 'normal';
+        var layer_territory_17_B_13 = new L.geoJson(json_territory_17_B_13, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_territory_17_B_13',
+            layerName: 'layer_territory_17_B_13',
+            pane: 'pane_territory_17_B_13',
+            onEachFeature: pop_territory_17_B_13,
+            style: style_territory_17_B_13_0,
+        });
+        bounds_group.addLayer(layer_territory_17_B_13);
+        map.addLayer(layer_territory_17_B_13);
+        function pop_territory_18a_B_14(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>number</strong><br />' + (feature.properties['number'] !== null ? autolinker.link(String(feature.properties['number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>locality</strong><br />' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>business</strong><br />' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>notes</strong><br />' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>disabled</strong><br />' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>tags</strong><br />' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_territory_18a_B_14_0() {
+            return {
+                pane: 'pane_territory_18a_B_14',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(51,90,225,0.10196078431372549)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_territory_18a_B_14');
+        map.getPane('pane_territory_18a_B_14').style.zIndex = 414;
+        map.getPane('pane_territory_18a_B_14').style['mix-blend-mode'] = 'normal';
+        var layer_territory_18a_B_14 = new L.geoJson(json_territory_18a_B_14, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_territory_18a_B_14',
+            layerName: 'layer_territory_18a_B_14',
+            pane: 'pane_territory_18a_B_14',
+            onEachFeature: pop_territory_18a_B_14,
+            style: style_territory_18a_B_14_0,
+        });
+        bounds_group.addLayer(layer_territory_18a_B_14);
+        map.addLayer(layer_territory_18a_B_14);
+        function pop_territory_18b_B_15(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>number</strong><br />' + (feature.properties['number'] !== null ? autolinker.link(String(feature.properties['number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>locality</strong><br />' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>business</strong><br />' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>notes</strong><br />' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>disabled</strong><br />' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>tags</strong><br />' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_territory_18b_B_15_0() {
+            return {
+                pane: 'pane_territory_18b_B_15',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(51,90,225,0.10196078431372549)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_territory_18b_B_15');
+        map.getPane('pane_territory_18b_B_15').style.zIndex = 415;
+        map.getPane('pane_territory_18b_B_15').style['mix-blend-mode'] = 'normal';
+        var layer_territory_18b_B_15 = new L.geoJson(json_territory_18b_B_15, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_territory_18b_B_15',
+            layerName: 'layer_territory_18b_B_15',
+            pane: 'pane_territory_18b_B_15',
+            onEachFeature: pop_territory_18b_B_15,
+            style: style_territory_18b_B_15_0,
+        });
+        bounds_group.addLayer(layer_territory_18b_B_15);
+        map.addLayer(layer_territory_18b_B_15);
+        function pop_territory_19_B_16(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>number</strong><br />' + (feature.properties['number'] !== null ? autolinker.link(String(feature.properties['number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>locality</strong><br />' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>business</strong><br />' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>notes</strong><br />' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>disabled</strong><br />' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>tags</strong><br />' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_territory_19_B_16_0() {
+            return {
+                pane: 'pane_territory_19_B_16',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(51,90,225,0.10196078431372549)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_territory_19_B_16');
+        map.getPane('pane_territory_19_B_16').style.zIndex = 416;
+        map.getPane('pane_territory_19_B_16').style['mix-blend-mode'] = 'normal';
+        var layer_territory_19_B_16 = new L.geoJson(json_territory_19_B_16, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_territory_19_B_16',
+            layerName: 'layer_territory_19_B_16',
+            pane: 'pane_territory_19_B_16',
+            onEachFeature: pop_territory_19_B_16,
+            style: style_territory_19_B_16_0,
+        });
+        bounds_group.addLayer(layer_territory_19_B_16);
+        map.addLayer(layer_territory_19_B_16);
+        function pop_territory_20_B_17(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>number</strong><br />' + (feature.properties['number'] !== null ? autolinker.link(String(feature.properties['number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>locality</strong><br />' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>business</strong><br />' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>notes</strong><br />' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>disabled</strong><br />' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>tags</strong><br />' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_territory_20_B_17_0() {
+            return {
+                pane: 'pane_territory_20_B_17',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(51,90,225,0.10196078431372549)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_territory_20_B_17');
+        map.getPane('pane_territory_20_B_17').style.zIndex = 417;
+        map.getPane('pane_territory_20_B_17').style['mix-blend-mode'] = 'normal';
+        var layer_territory_20_B_17 = new L.geoJson(json_territory_20_B_17, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_territory_20_B_17',
+            layerName: 'layer_territory_20_B_17',
+            pane: 'pane_territory_20_B_17',
+            onEachFeature: pop_territory_20_B_17,
+            style: style_territory_20_B_17_0,
+        });
+        bounds_group.addLayer(layer_territory_20_B_17);
+        map.addLayer(layer_territory_20_B_17);
+        function pop_territory_21a_B_18(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>number</strong><br />' + (feature.properties['number'] !== null ? autolinker.link(String(feature.properties['number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>locality</strong><br />' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>business</strong><br />' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>notes</strong><br />' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>disabled</strong><br />' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>tags</strong><br />' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_territory_21a_B_18_0() {
+            return {
+                pane: 'pane_territory_21a_B_18',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(51,90,225,0.10196078431372549)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_territory_21a_B_18');
+        map.getPane('pane_territory_21a_B_18').style.zIndex = 418;
+        map.getPane('pane_territory_21a_B_18').style['mix-blend-mode'] = 'normal';
+        var layer_territory_21a_B_18 = new L.geoJson(json_territory_21a_B_18, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_territory_21a_B_18',
+            layerName: 'layer_territory_21a_B_18',
+            pane: 'pane_territory_21a_B_18',
+            onEachFeature: pop_territory_21a_B_18,
+            style: style_territory_21a_B_18_0,
+        });
+        bounds_group.addLayer(layer_territory_21a_B_18);
+        map.addLayer(layer_territory_21a_B_18);
+        function pop_territory_21b_B_19(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>number</strong><br />' + (feature.properties['number'] !== null ? autolinker.link(String(feature.properties['number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>locality</strong><br />' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>business</strong><br />' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>notes</strong><br />' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>disabled</strong><br />' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>tags</strong><br />' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_territory_21b_B_19_0() {
+            return {
+                pane: 'pane_territory_21b_B_19',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(51,90,225,0.10196078431372549)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_territory_21b_B_19');
+        map.getPane('pane_territory_21b_B_19').style.zIndex = 419;
+        map.getPane('pane_territory_21b_B_19').style['mix-blend-mode'] = 'normal';
+        var layer_territory_21b_B_19 = new L.geoJson(json_territory_21b_B_19, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_territory_21b_B_19',
+            layerName: 'layer_territory_21b_B_19',
+            pane: 'pane_territory_21b_B_19',
+            onEachFeature: pop_territory_21b_B_19,
+            style: style_territory_21b_B_19_0,
+        });
+        bounds_group.addLayer(layer_territory_21b_B_19);
+        map.addLayer(layer_territory_21b_B_19);
+        function pop_territory_21c_B_20(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>number</strong><br />' + (feature.properties['number'] !== null ? autolinker.link(String(feature.properties['number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>locality</strong><br />' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>business</strong><br />' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>notes</strong><br />' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>disabled</strong><br />' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>tags</strong><br />' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_territory_21c_B_20_0() {
+            return {
+                pane: 'pane_territory_21c_B_20',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(51,90,225,0.10196078431372549)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_territory_21c_B_20');
+        map.getPane('pane_territory_21c_B_20').style.zIndex = 420;
+        map.getPane('pane_territory_21c_B_20').style['mix-blend-mode'] = 'normal';
+        var layer_territory_21c_B_20 = new L.geoJson(json_territory_21c_B_20, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_territory_21c_B_20',
+            layerName: 'layer_territory_21c_B_20',
+            pane: 'pane_territory_21c_B_20',
+            onEachFeature: pop_territory_21c_B_20,
+            style: style_territory_21c_B_20_0,
+        });
+        bounds_group.addLayer(layer_territory_21c_B_20);
+        map.addLayer(layer_territory_21c_B_20);
+        function pop_territory_22a_B_21(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>number</strong><br />' + (feature.properties['number'] !== null ? autolinker.link(String(feature.properties['number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>locality</strong><br />' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>business</strong><br />' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>notes</strong><br />' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>disabled</strong><br />' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>tags</strong><br />' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_territory_22a_B_21_0() {
+            return {
+                pane: 'pane_territory_22a_B_21',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(51,90,225,0.10196078431372549)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_territory_22a_B_21');
+        map.getPane('pane_territory_22a_B_21').style.zIndex = 421;
+        map.getPane('pane_territory_22a_B_21').style['mix-blend-mode'] = 'normal';
+        var layer_territory_22a_B_21 = new L.geoJson(json_territory_22a_B_21, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_territory_22a_B_21',
+            layerName: 'layer_territory_22a_B_21',
+            pane: 'pane_territory_22a_B_21',
+            onEachFeature: pop_territory_22a_B_21,
+            style: style_territory_22a_B_21_0,
+        });
+        bounds_group.addLayer(layer_territory_22a_B_21);
+        map.addLayer(layer_territory_22a_B_21);
+        function pop_territory_22b_B_22(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>number</strong><br />' + (feature.properties['number'] !== null ? autolinker.link(String(feature.properties['number']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>locality</strong><br />' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>business</strong><br />' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>notes</strong><br />' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>disabled</strong><br />' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>tags</strong><br />' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_territory_22b_B_22_0() {
+            return {
+                pane: 'pane_territory_22b_B_22',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(51,90,225,0.10196078431372549)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_territory_22b_B_22');
+        map.getPane('pane_territory_22b_B_22').style.zIndex = 422;
+        map.getPane('pane_territory_22b_B_22').style['mix-blend-mode'] = 'normal';
+        var layer_territory_22b_B_22 = new L.geoJson(json_territory_22b_B_22, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_territory_22b_B_22',
+            layerName: 'layer_territory_22b_B_22',
+            pane: 'pane_territory_22b_B_22',
+            onEachFeature: pop_territory_22b_B_22,
+            style: style_territory_22b_B_22_0,
+        });
+        bounds_group.addLayer(layer_territory_22b_B_22);
+        map.addLayer(layer_territory_22b_B_22);
+        function pop_LakeRonkonkomaNYUSA104216_23(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2"><strong>Name</strong><br />' + (feature.properties['Name'] !== null ? autolinker.link(String(feature.properties['Name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -253,9 +1471,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_LakeRonkonkomaNYUSA104216_2_0() {
+        function style_LakeRonkonkomaNYUSA104216_23_0() {
             return {
-                pane: 'pane_LakeRonkonkomaNYUSA104216_2',
+                pane: 'pane_LakeRonkonkomaNYUSA104216_23',
                 opacity: 1,
                 color: 'rgba(77,175,74,1.0)',
                 dashArray: '',
@@ -266,20 +1484,20 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_LakeRonkonkomaNYUSA104216_2');
-        map.getPane('pane_LakeRonkonkomaNYUSA104216_2').style.zIndex = 402;
-        map.getPane('pane_LakeRonkonkomaNYUSA104216_2').style['mix-blend-mode'] = 'normal';
-        var layer_LakeRonkonkomaNYUSA104216_2 = new L.geoJson(json_LakeRonkonkomaNYUSA104216_2, {
+        map.createPane('pane_LakeRonkonkomaNYUSA104216_23');
+        map.getPane('pane_LakeRonkonkomaNYUSA104216_23').style.zIndex = 423;
+        map.getPane('pane_LakeRonkonkomaNYUSA104216_23').style['mix-blend-mode'] = 'normal';
+        var layer_LakeRonkonkomaNYUSA104216_23 = new L.geoJson(json_LakeRonkonkomaNYUSA104216_23, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_LakeRonkonkomaNYUSA104216_2',
-            layerName: 'layer_LakeRonkonkomaNYUSA104216_2',
-            pane: 'pane_LakeRonkonkomaNYUSA104216_2',
-            onEachFeature: pop_LakeRonkonkomaNYUSA104216_2,
-            style: style_LakeRonkonkomaNYUSA104216_2_0,
+            dataVar: 'json_LakeRonkonkomaNYUSA104216_23',
+            layerName: 'layer_LakeRonkonkomaNYUSA104216_23',
+            pane: 'pane_LakeRonkonkomaNYUSA104216_23',
+            onEachFeature: pop_LakeRonkonkomaNYUSA104216_23,
+            style: style_LakeRonkonkomaNYUSA104216_23_0,
         });
-        bounds_group.addLayer(layer_LakeRonkonkomaNYUSA104216_2);
-        map.addLayer(layer_LakeRonkonkomaNYUSA104216_2);
+        bounds_group.addLayer(layer_LakeRonkonkomaNYUSA104216_23);
+        map.addLayer(layer_LakeRonkonkomaNYUSA104216_23);
         const url = {"Nominatim OSM": "https://nominatim.openstreetmap.org/search?format=geojson&addressdetails=1&",
         "France BAN": "https://api-adresse.data.gouv.fr/search/?"}
         var photonControl = L.control.photon({
@@ -335,9 +1553,30 @@
         });
         var overlaysTree = [
         {label: '<b>BOUNDARIES</b>',  selectAllCheckbox: true, children: [
-            {label: '<img src="legend/LakeRonkonkomaNYUSA104216_2.png" /> Lake Ronkonkoma - NY (USA) (104216)', layer: layer_LakeRonkonkomaNYUSA104216_2},]},
-        {label: '<b>Territory Type</b>', collapsed: true, selectAllCheckbox: true, children: [
-            {label: '<img src="legend/D2DFilteredGeo_1.png" /> D2D Filtered Geo', layer: layer_D2DFilteredGeo_1},]},
+            {label: '<img src="legend/LakeRonkonkomaNYUSA104216_23.png" /> Lake Ronkonkoma - NY (USA) (104216)', layer: layer_LakeRonkonkomaNYUSA104216_23},]},
+        {label: '<b>Business</b>',  selectAllCheckbox: true, children: [
+            {label: '<img src="legend/territory_22b_B_22.png" /> territory_22(b)_B', layer: layer_territory_22b_B_22},
+            {label: '<img src="legend/territory_22a_B_21.png" /> territory_22(a)_B', layer: layer_territory_22a_B_21},
+            {label: '<img src="legend/territory_21c_B_20.png" /> territory_21(c)_B', layer: layer_territory_21c_B_20},
+            {label: '<img src="legend/territory_21b_B_19.png" /> territory_21b_B', layer: layer_territory_21b_B_19},
+            {label: '<img src="legend/territory_21a_B_18.png" /> territory_21(a)_B', layer: layer_territory_21a_B_18},
+            {label: '<img src="legend/territory_20_B_17.png" /> territory_20_B', layer: layer_territory_20_B_17},
+            {label: '<img src="legend/territory_19_B_16.png" /> territory_19_B', layer: layer_territory_19_B_16},
+            {label: '<img src="legend/territory_18b_B_15.png" /> territory_18b_B', layer: layer_territory_18b_B_15},
+            {label: '<img src="legend/territory_18a_B_14.png" /> territory_18a_B', layer: layer_territory_18a_B_14},
+            {label: '<img src="legend/territory_17_B_13.png" /> territory_17_B', layer: layer_territory_17_B_13},
+            {label: '<img src="legend/territory_16_B_12.png" /> territory_16_B', layer: layer_territory_16_B_12},
+            {label: '<img src="legend/territory_15_B_11.png" /> territory_15_B', layer: layer_territory_15_B_11},
+            {label: '<img src="legend/territory_14_B_10.png" /> territory_14_B', layer: layer_territory_14_B_10},
+            {label: '<img src="legend/territory_13_B_9.png" /> territory_13_B', layer: layer_territory_13_B_9},
+            {label: '<img src="legend/territory_12_B_8.png" /> territory_12_B', layer: layer_territory_12_B_8},
+            {label: '<img src="legend/territory_11_B_7.png" /> territory_11_B', layer: layer_territory_11_B_7},
+            {label: '<img src="legend/territory_10_B_6.png" /> territory_10_B', layer: layer_territory_10_B_6},
+            {label: '<img src="legend/territory_9_B_5.png" /> territory_9_B', layer: layer_territory_9_B_5},
+            {label: '<img src="legend/territory_8_B_4.png" /> territory_8_B', layer: layer_territory_8_B_4},
+            {label: '<img src="legend/territory_2_B_3.png" /> territory_2_B', layer: layer_territory_2_B_3},
+            {label: '<img src="legend/territory_1_B_2.png" /> territory_1_B', layer: layer_territory_1_B_2},]},
+            {label: '<img src="legend/MergedTerritory_1.png" /> MergedTerritory', layer: layer_MergedTerritory_1},
         {label: '<b>BASEMAP</b>',  selectAllCheckbox: true, children: [
             {label: "Google Maps", layer: layer_GoogleMaps_0, radioGroup: 'bm' },]},]
         var lay = L.control.layers.tree(null, overlaysTree,{
@@ -402,27 +1641,300 @@
         });       
         setBounds();
         var i = 0;
-        layer_D2DFilteredGeo_1.eachLayer(function(layer) {
+        layer_MergedTerritory_1.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((exp_label_D2DFilteredGeo_1_eval_expression(context) !== null?String('<div style="color: #323232; font-size: 15pt; font-weight: bold; font-family: \'Open Sans\', sans-serif;">' + exp_label_D2DFilteredGeo_1_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_D2DFilteredGeo_1'});
+            layer.bindTooltip((exp_label_MergedTerritory_1_eval_expression(context) !== null?String('<div style="color: #323232; font-size: 30pt; font-family: \'Open Sans\', sans-serif;">' + exp_label_MergedTerritory_1_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_MergedTerritory_1'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
               addLabel(layer, i);
               i++;
         });
-        resetLabels([layer_D2DFilteredGeo_1]);
+        var i = 0;
+        layer_territory_1_B_2.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((exp_label_territory_1_B_2_eval_expression(context) !== null?String('<div style="color: #3a04e7; font-size: 20pt; font-family: \'Open Sans\', sans-serif;">' + exp_label_territory_1_B_2_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_territory_1_B_2'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_territory_2_B_3.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((exp_label_territory_2_B_3_eval_expression(context) !== null?String('<div style="color: #3a04e7; font-size: 20pt; font-family: \'Open Sans\', sans-serif;">' + exp_label_territory_2_B_3_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_territory_2_B_3'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_territory_8_B_4.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((exp_label_territory_8_B_4_eval_expression(context) !== null?String('<div style="color: #3a04e7; font-size: 20pt; font-family: \'Open Sans\', sans-serif;">' + exp_label_territory_8_B_4_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_territory_8_B_4'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_territory_9_B_5.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((exp_label_territory_9_B_5_eval_expression(context) !== null?String('<div style="color: #3a04e7; font-size: 20pt; font-family: \'Open Sans\', sans-serif;">' + exp_label_territory_9_B_5_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_territory_9_B_5'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_territory_10_B_6.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((exp_label_territory_10_B_6_eval_expression(context) !== null?String('<div style="color: #3a04e7; font-size: 20pt; font-family: \'Open Sans\', sans-serif;">' + exp_label_territory_10_B_6_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_territory_10_B_6'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_territory_11_B_7.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((exp_label_territory_11_B_7_eval_expression(context) !== null?String('<div style="color: #3a04e7; font-size: 20pt; font-family: \'Open Sans\', sans-serif;">' + exp_label_territory_11_B_7_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_territory_11_B_7'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_territory_12_B_8.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((exp_label_territory_12_B_8_eval_expression(context) !== null?String('<div style="color: #3a04e7; font-size: 20pt; font-family: \'Open Sans\', sans-serif;">' + exp_label_territory_12_B_8_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_territory_12_B_8'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_territory_13_B_9.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((exp_label_territory_13_B_9_eval_expression(context) !== null?String('<div style="color: #3a04e7; font-size: 20pt; font-family: \'Open Sans\', sans-serif;">' + exp_label_territory_13_B_9_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_territory_13_B_9'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_territory_14_B_10.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((exp_label_territory_14_B_10_eval_expression(context) !== null?String('<div style="color: #3a04e7; font-size: 20pt; font-family: \'Open Sans\', sans-serif;">' + exp_label_territory_14_B_10_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_territory_14_B_10'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_territory_15_B_11.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((exp_label_territory_15_B_11_eval_expression(context) !== null?String('<div style="color: #3a04e7; font-size: 20pt; font-family: \'Open Sans\', sans-serif;">' + exp_label_territory_15_B_11_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_territory_15_B_11'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_territory_16_B_12.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((exp_label_territory_16_B_12_eval_expression(context) !== null?String('<div style="color: #3a04e7; font-size: 20pt; font-family: \'Open Sans\', sans-serif;">' + exp_label_territory_16_B_12_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_territory_16_B_12'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_territory_17_B_13.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((exp_label_territory_17_B_13_eval_expression(context) !== null?String('<div style="color: #3a04e7; font-size: 20pt; font-family: \'Open Sans\', sans-serif;">' + exp_label_territory_17_B_13_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_territory_17_B_13'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_territory_18a_B_14.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((exp_label_territory_18a_B_14_eval_expression(context) !== null?String('<div style="color: #3a04e7; font-size: 20pt; font-family: \'Open Sans\', sans-serif;">' + exp_label_territory_18a_B_14_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_territory_18a_B_14'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_territory_18b_B_15.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((exp_label_territory_18b_B_15_eval_expression(context) !== null?String('<div style="color: #3a04e7; font-size: 20pt; font-family: \'Open Sans\', sans-serif;">' + exp_label_territory_18b_B_15_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_territory_18b_B_15'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_territory_19_B_16.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((exp_label_territory_19_B_16_eval_expression(context) !== null?String('<div style="color: #3a04e7; font-size: 20pt; font-family: \'Open Sans\', sans-serif;">' + exp_label_territory_19_B_16_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_territory_19_B_16'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_territory_20_B_17.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((exp_label_territory_20_B_17_eval_expression(context) !== null?String('<div style="color: #3a04e7; font-size: 20pt; font-family: \'Open Sans\', sans-serif;">' + exp_label_territory_20_B_17_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_territory_20_B_17'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_territory_21a_B_18.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((exp_label_territory_21a_B_18_eval_expression(context) !== null?String('<div style="color: #3a04e7; font-size: 20pt; font-family: \'Open Sans\', sans-serif;">' + exp_label_territory_21a_B_18_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_territory_21a_B_18'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_territory_21b_B_19.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((exp_label_territory_21b_B_19_eval_expression(context) !== null?String('<div style="color: #3a04e7; font-size: 20pt; font-family: \'Open Sans\', sans-serif;">' + exp_label_territory_21b_B_19_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_territory_21b_B_19'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_territory_21c_B_20.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((exp_label_territory_21c_B_20_eval_expression(context) !== null?String('<div style="color: #3a04e7; font-size: 20pt; font-family: \'Open Sans\', sans-serif;">' + exp_label_territory_21c_B_20_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_territory_21c_B_20'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_territory_22a_B_21.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((exp_label_territory_22a_B_21_eval_expression(context) !== null?String('<div style="color: #3a04e7; font-size: 20pt; font-family: \'Open Sans\', sans-serif;">' + exp_label_territory_22a_B_21_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_territory_22a_B_21'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_territory_22b_B_22.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((exp_label_territory_22b_B_22_eval_expression(context) !== null?String('<div style="color: #3a04e7; font-size: 15pt; font-family: \'Open Sans\', sans-serif;">' + exp_label_territory_22b_B_22_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_territory_22b_B_22'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        resetLabels([layer_MergedTerritory_1,layer_territory_1_B_2,layer_territory_2_B_3,layer_territory_8_B_4,layer_territory_9_B_5,layer_territory_10_B_6,layer_territory_11_B_7,layer_territory_12_B_8,layer_territory_13_B_9,layer_territory_14_B_10,layer_territory_15_B_11,layer_territory_16_B_12,layer_territory_17_B_13,layer_territory_18a_B_14,layer_territory_18b_B_15,layer_territory_19_B_16,layer_territory_20_B_17,layer_territory_21a_B_18,layer_territory_21b_B_19,layer_territory_21c_B_20,layer_territory_22a_B_21,layer_territory_22b_B_22]);
         map.on("zoomend", function(){
-            resetLabels([layer_D2DFilteredGeo_1]);
+            resetLabels([layer_MergedTerritory_1,layer_territory_1_B_2,layer_territory_2_B_3,layer_territory_8_B_4,layer_territory_9_B_5,layer_territory_10_B_6,layer_territory_11_B_7,layer_territory_12_B_8,layer_territory_13_B_9,layer_territory_14_B_10,layer_territory_15_B_11,layer_territory_16_B_12,layer_territory_17_B_13,layer_territory_18a_B_14,layer_territory_18b_B_15,layer_territory_19_B_16,layer_territory_20_B_17,layer_territory_21a_B_18,layer_territory_21b_B_19,layer_territory_21c_B_20,layer_territory_22a_B_21,layer_territory_22b_B_22]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_D2DFilteredGeo_1]);
+            resetLabels([layer_MergedTerritory_1,layer_territory_1_B_2,layer_territory_2_B_3,layer_territory_8_B_4,layer_territory_9_B_5,layer_territory_10_B_6,layer_territory_11_B_7,layer_territory_12_B_8,layer_territory_13_B_9,layer_territory_14_B_10,layer_territory_15_B_11,layer_territory_16_B_12,layer_territory_17_B_13,layer_territory_18a_B_14,layer_territory_18b_B_15,layer_territory_19_B_16,layer_territory_20_B_17,layer_territory_21a_B_18,layer_territory_21b_B_19,layer_territory_21c_B_20,layer_territory_22a_B_21,layer_territory_22b_B_22]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_D2DFilteredGeo_1]);
+            resetLabels([layer_MergedTerritory_1,layer_territory_1_B_2,layer_territory_2_B_3,layer_territory_8_B_4,layer_territory_9_B_5,layer_territory_10_B_6,layer_territory_11_B_7,layer_territory_12_B_8,layer_territory_13_B_9,layer_territory_14_B_10,layer_territory_15_B_11,layer_territory_16_B_12,layer_territory_17_B_13,layer_territory_18a_B_14,layer_territory_18b_B_15,layer_territory_19_B_16,layer_territory_20_B_17,layer_territory_21a_B_18,layer_territory_21b_B_19,layer_territory_21c_B_20,layer_territory_22a_B_21,layer_territory_22b_B_22]);
         });
         </script>
     </body>

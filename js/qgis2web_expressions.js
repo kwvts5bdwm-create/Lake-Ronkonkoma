@@ -757,7 +757,7 @@ function fnc_project_color(values, context) {
 
 
 
-function exp_label_D2DFilteredGeo_1_eval_expression(context) {
+function exp_label_MergedTerritory_1_eval_expression(context) {
     // number + '-' + 'T'
 
     var feature = context.feature;
@@ -770,7 +770,280 @@ function exp_label_D2DFilteredGeo_1_eval_expression(context) {
 }
 
 
-function exp_label_D2DFilteredGeo_1_eval_expression(context) {
+function exp_label_territory_1_B_2_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_2_B_3_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_8_B_4_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_9_B_5_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_10_B_6_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_11_B_7_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_12_B_8_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_13_B_9_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_14_B_10_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_15_B_11_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_16_B_12_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_17_B_13_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_18a_B_14_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_18b_B_15_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_19_B_16_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_20_B_17_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_21a_B_18_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_21b_B_19_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_21c_B_20_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_22a_B_21_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_22b_B_22_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_MergedTerritory_1_eval_expression(context) {
     // number + '-' + 'T'
 
     var feature = context.feature;
@@ -779,5 +1052,278 @@ function exp_label_D2DFilteredGeo_1_eval_expression(context) {
         return ((feature.properties['number']  + '-') + 'T');
     } else {
         return ((feature['number']  + '-') + 'T');
+    }
+}
+
+
+function exp_label_territory_1_B_2_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_2_B_3_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_8_B_4_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_9_B_5_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_10_B_6_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_11_B_7_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_12_B_8_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_13_B_9_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_14_B_10_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_15_B_11_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_16_B_12_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_17_B_13_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_18a_B_14_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_18b_B_15_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_19_B_16_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_20_B_17_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_21a_B_18_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_21b_B_19_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_21c_B_20_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_22a_B_21_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
+    }
+}
+
+
+function exp_label_territory_22b_B_22_eval_expression(context) {
+    // number + '-' + locality
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['number']  + '-') + feature.properties['locality'] );
+    } else {
+        return ((feature['number']  + '-') + feature['locality'] );
     }
 }
