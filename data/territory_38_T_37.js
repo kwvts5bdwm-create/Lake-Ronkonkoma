@@ -1,1 +1,0 @@
-var json_territory_38_T_37 = {"type":"FeatureCollection","name":"territory_38_T_37","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[]}
