@@ -6237,6 +6237,176 @@
                 last.style.display = "none";
             }
         });
+        var overlaysTree = [
+        {label: '<b>BOUNDARIES</b>',  selectAllCheckbox: true, children: [
+            {label: '<img src="legend/LakeRonkonkomaNYUSA104216_104.png" /> Lake Ronkonkoma - NY (USA) (104216)', layer: layer_LakeRonkonkomaNYUSA104216_104},]},
+        {label: '<b>Business</b>', collapsed: true, selectAllCheckbox: true, children: [
+            {label: '<img src="legend/territory_22b_B_103.png" /> territory_22(b)_B', layer: layer_territory_22b_B_103},
+            {label: '<img src="legend/territory_22a_B_102.png" /> territory_22(a)_B', layer: layer_territory_22a_B_102},
+            {label: '<img src="legend/territory_21c_B_101.png" /> territory_21(c)_B', layer: layer_territory_21c_B_101},
+            {label: '<img src="legend/territory_21b_B_100.png" /> territory_21b_B', layer: layer_territory_21b_B_100},
+            {label: '<img src="legend/territory_21a_B_99.png" /> territory_21(a)_B', layer: layer_territory_21a_B_99},
+            {label: '<img src="legend/territory_20_B_98.png" /> territory_20_B', layer: layer_territory_20_B_98},
+            {label: '<img src="legend/territory_19_B_97.png" /> territory_19_B', layer: layer_territory_19_B_97},
+            {label: '<img src="legend/territory_18b_B_96.png" /> territory_18b_B', layer: layer_territory_18b_B_96},
+            {label: '<img src="legend/territory_18a_B_95.png" /> territory_18a_B', layer: layer_territory_18a_B_95},
+            {label: '<img src="legend/territory_17_B_94.png" /> territory_17_B', layer: layer_territory_17_B_94},
+            {label: '<img src="legend/territory_16_B_93.png" /> territory_16_B', layer: layer_territory_16_B_93},
+            {label: '<img src="legend/territory_15_B_92.png" /> territory_15_B', layer: layer_territory_15_B_92},
+            {label: '<img src="legend/territory_14_B_91.png" /> territory_14_B', layer: layer_territory_14_B_91},
+            {label: '<img src="legend/territory_13_B_90.png" /> territory_13_B', layer: layer_territory_13_B_90},
+            {label: '<img src="legend/territory_12_B_89.png" /> territory_12_B', layer: layer_territory_12_B_89},
+            {label: '<img src="legend/territory_11_B_88.png" /> territory_11_B', layer: layer_territory_11_B_88},
+            {label: '<img src="legend/territory_10_B_87.png" /> territory_10_B', layer: layer_territory_10_B_87},
+            {label: '<img src="legend/territory_9_B_86.png" /> territory_9_B', layer: layer_territory_9_B_86},
+            {label: '<img src="legend/territory_8_B_85.png" /> territory_8_B', layer: layer_territory_8_B_85},
+            {label: '<img src="legend/territory_2_B_84.png" /> territory_2_B', layer: layer_territory_2_B_84},
+            {label: '<img src="legend/territory_1_B_83.png" /> territory_1_B', layer: layer_territory_1_B_83},]},
+        {label: '<b>Door2Door</b>', collapsed: true, selectAllCheckbox: true, children: [
+            {label: '<img src="legend/territory_82_T_82.png" /> territory_82_T', layer: layer_territory_82_T_82},
+            {label: '<img src="legend/territory_81_T_81.png" /> territory_81_T', layer: layer_territory_81_T_81},
+            {label: '<img src="legend/territory_80_T_80.png" /> territory_80_T', layer: layer_territory_80_T_80},
+            {label: '<img src="legend/territory_79_T_79.png" /> territory_79_T', layer: layer_territory_79_T_79},
+            {label: '<img src="legend/territory_78_T_78.png" /> territory_78_T', layer: layer_territory_78_T_78},
+            {label: '<img src="legend/territory_77_T_77.png" /> territory_77_T', layer: layer_territory_77_T_77},
+            {label: '<img src="legend/territory_76_T_76.png" /> territory_76_T', layer: layer_territory_76_T_76},
+            {label: '<img src="legend/territory_75_T_75.png" /> territory_75_T', layer: layer_territory_75_T_75},
+            {label: '<img src="legend/territory_74_T_74.png" /> territory_74_T', layer: layer_territory_74_T_74},
+            {label: '<img src="legend/territory_73_T_73.png" /> territory_73_T', layer: layer_territory_73_T_73},
+            {label: '<img src="legend/territory_72_T_72.png" /> territory_72_T', layer: layer_territory_72_T_72},
+            {label: '<img src="legend/territory_71_T_71.png" /> territory_71_T', layer: layer_territory_71_T_71},
+            {label: '<img src="legend/territory_70_T_70.png" /> territory_70_T', layer: layer_territory_70_T_70},
+            {label: '<img src="legend/territory_69_T_69.png" /> territory_69_T', layer: layer_territory_69_T_69},
+            {label: '<img src="legend/territory_68_T_68.png" /> territory_68_T', layer: layer_territory_68_T_68},
+            {label: '<img src="legend/territory_67_T_67.png" /> territory_67_T', layer: layer_territory_67_T_67},
+            {label: '<img src="legend/territory_66_T_66.png" /> territory_66_T', layer: layer_territory_66_T_66},
+            {label: '<img src="legend/territory_65_T_65.png" /> territory_65_T', layer: layer_territory_65_T_65},
+            {label: '<img src="legend/territory_64_T_64.png" /> territory_64_T', layer: layer_territory_64_T_64},
+            {label: '<img src="legend/territory_63_T_63.png" /> territory_63_T', layer: layer_territory_63_T_63},
+            {label: '<img src="legend/territory_62_T_62.png" /> territory_62_T', layer: layer_territory_62_T_62},
+            {label: '<img src="legend/territory_61_T_61.png" /> territory_61_T', layer: layer_territory_61_T_61},
+            {label: '<img src="legend/territory_60_T_60.png" /> territory_60_T', layer: layer_territory_60_T_60},
+            {label: '<img src="legend/territory_59_T_59.png" /> territory_59_T', layer: layer_territory_59_T_59},
+            {label: '<img src="legend/territory_58_T_58.png" /> territory_58_T', layer: layer_territory_58_T_58},
+            {label: '<img src="legend/territory_57_T_57.png" /> territory_57_T', layer: layer_territory_57_T_57},
+            {label: '<img src="legend/territory_56_T_56.png" /> territory_56_T', layer: layer_territory_56_T_56},
+            {label: '<img src="legend/territory_55_T_55.png" /> territory_55_T', layer: layer_territory_55_T_55},
+            {label: '<img src="legend/territory_54_T_54.png" /> territory_54_T', layer: layer_territory_54_T_54},
+            {label: '<img src="legend/territory_53_T_53.png" /> territory_53_T', layer: layer_territory_53_T_53},
+            {label: '<img src="legend/territory_52_T_52.png" /> territory_52_T', layer: layer_territory_52_T_52},
+            {label: '<img src="legend/territory_51_T_51.png" /> territory_51_T', layer: layer_territory_51_T_51},
+            {label: '<img src="legend/territory_50_T_50.png" /> territory_50_T', layer: layer_territory_50_T_50},
+            {label: '<img src="legend/territory_49_T_49.png" /> territory_49_T', layer: layer_territory_49_T_49},
+            {label: '<img src="legend/territory_48_T_48.png" /> territory_48_T', layer: layer_territory_48_T_48},
+            {label: '<img src="legend/territory_47_T_47.png" /> territory_47_T', layer: layer_territory_47_T_47},
+            {label: '<img src="legend/territory_46_T_46.png" /> territory_46_T', layer: layer_territory_46_T_46},
+            {label: '<img src="legend/territory_45_T_45.png" /> territory_45_T', layer: layer_territory_45_T_45},
+            {label: '<img src="legend/territory_44_T_44.png" /> territory_44_T', layer: layer_territory_44_T_44},
+            {label: '<img src="legend/territory_43_T_43.png" /> territory_43_T', layer: layer_territory_43_T_43},
+            {label: '<img src="legend/territory_42_T_42.png" /> territory_42_T', layer: layer_territory_42_T_42},
+            {label: '<img src="legend/territory_41_T_41.png" /> territory_41_T', layer: layer_territory_41_T_41},
+            {label: '<img src="legend/territory_40_T_40.png" /> territory_40_T', layer: layer_territory_40_T_40},
+            {label: '<img src="legend/territory_39_T_39.png" /> territory_39_T', layer: layer_territory_39_T_39},
+            {label: '<img src="legend/territory_38_T_38.png" /> territory_38_T', layer: layer_territory_38_T_38},
+            {label: '<img src="legend/territory_37_T_37.png" /> territory_37_T', layer: layer_territory_37_T_37},
+            {label: '<img src="legend/territory_36_T_36.png" /> territory_36_T', layer: layer_territory_36_T_36},
+            {label: '<img src="legend/territory_35_T_35.png" /> territory_35_T', layer: layer_territory_35_T_35},
+            {label: '<img src="legend/territory_34_T_34.png" /> territory_34_T', layer: layer_territory_34_T_34},
+            {label: '<img src="legend/territory_33_T_33.png" /> territory_33_T', layer: layer_territory_33_T_33},
+            {label: '<img src="legend/territory_32_T_32.png" /> territory_32_T', layer: layer_territory_32_T_32},
+            {label: '<img src="legend/territory_31_T_31.png" /> territory_31_T', layer: layer_territory_31_T_31},
+            {label: '<img src="legend/territory_30_T_30.png" /> territory_30_T', layer: layer_territory_30_T_30},
+            {label: '<img src="legend/territory_29_T_29.png" /> territory_29_T', layer: layer_territory_29_T_29},
+            {label: '<img src="legend/territory_28_T_28.png" /> territory_28_T', layer: layer_territory_28_T_28},
+            {label: '<img src="legend/territory_27_T_27.png" /> territory_27_T', layer: layer_territory_27_T_27},
+            {label: '<img src="legend/territory_26_T_26.png" /> territory_26_T', layer: layer_territory_26_T_26},
+            {label: '<img src="legend/territory_25_T_25.png" /> territory_25_T', layer: layer_territory_25_T_25},
+            {label: '<img src="legend/territory_24_T_24.png" /> territory_24_T', layer: layer_territory_24_T_24},
+            {label: '<img src="legend/territory_23_T_23.png" /> territory_23_T', layer: layer_territory_23_T_23},
+            {label: '<img src="legend/territory_22_T_22.png" /> territory_22_T', layer: layer_territory_22_T_22},
+            {label: '<img src="legend/territory_21_T_21.png" /> territory_21_T', layer: layer_territory_21_T_21},
+            {label: '<img src="legend/territory_20_T_20.png" /> territory_20_T', layer: layer_territory_20_T_20},
+            {label: '<img src="legend/territory_19_T_19.png" /> territory_19_T', layer: layer_territory_19_T_19},
+            {label: '<img src="legend/territory_18_T_18.png" /> territory_18_T', layer: layer_territory_18_T_18},
+            {label: '<img src="legend/territory_17_T_17.png" /> territory_17_T', layer: layer_territory_17_T_17},
+            {label: '<img src="legend/territory_16_T_16.png" /> territory_16_T', layer: layer_territory_16_T_16},
+            {label: '<img src="legend/territory_15_T_15.png" /> territory_15_T', layer: layer_territory_15_T_15},
+            {label: '<img src="legend/territory_14_T_14.png" /> territory_14_T', layer: layer_territory_14_T_14},
+            {label: '<img src="legend/territory_13_T_13.png" /> territory_13_T', layer: layer_territory_13_T_13},
+            {label: '<img src="legend/territory_12_T_12.png" /> territory_12_T', layer: layer_territory_12_T_12},
+            {label: '<img src="legend/territory_11_T_11.png" /> territory_11_T', layer: layer_territory_11_T_11},
+            {label: '<img src="legend/territory_10_T_10.png" /> territory_10_T', layer: layer_territory_10_T_10},
+            {label: '<img src="legend/territory_9_T_9.png" /> territory_9_T', layer: layer_territory_9_T_9},
+            {label: '<img src="legend/territory_8_T_8.png" /> territory_8_T', layer: layer_territory_8_T_8},
+            {label: '<img src="legend/territory_7_T_7.png" /> territory_7_T', layer: layer_territory_7_T_7},
+            {label: '<img src="legend/territory_6_T_6.png" /> territory_6_T', layer: layer_territory_6_T_6},
+            {label: '<img src="legend/territory_5_T_5.png" /> territory_5_T', layer: layer_territory_5_T_5},
+            {label: '<img src="legend/territory_4_T_4.png" /> territory_4_T', layer: layer_territory_4_T_4},
+            {label: '<img src="legend/territory_3_T_3.png" /> territory_3_T', layer: layer_territory_3_T_3},
+            {label: '<img src="legend/territory_2_T_2.png" /> territory_2_T', layer: layer_territory_2_T_2},
+            {label: '<img src="legend/territory_1_T_1.png" /> territory_1_T', layer: layer_territory_1_T_1},]},
+        {label: '<b>BASEMAP</b>',  selectAllCheckbox: true, children: [
+            {label: "Google Maps", layer: layer_GoogleMaps_0, radioGroup: 'bm' },]},]
+        var lay = L.control.layers.tree(null, overlaysTree,{
+            //namedToggle: true,
+            //selectorBack: false,
+            //closedSymbol: '&#8862; &#x1f5c0;',
+            //openedSymbol: '&#8863; &#x1f5c1;',
+            //collapseAll: 'Collapse all',
+            //expandAll: 'Expand all',
+            collapsed: false, 
+        });
+        lay.addTo(map);
+		document.addEventListener("DOMContentLoaded", function() {
+            // set new Layers List height which considers toggle icon
+            function newLayersListHeight() {
+                var layerScrollbarElement = document.querySelector('.leaflet-control-layers-scrollbar');
+                if (layerScrollbarElement) {
+                    var layersListElement = document.querySelector('.leaflet-control-layers-list');
+                    var originalHeight = layersListElement.style.height 
+                        || window.getComputedStyle(layersListElement).height;
+                    var newHeight = parseFloat(originalHeight) - 50;
+                    layersListElement.style.height = newHeight + 'px';
+                }
+            }
+            var isLayersListExpanded = true;
+            var controlLayersElement = document.querySelector('.leaflet-control-layers');
+            var toggleLayerControl = document.querySelector('.leaflet-control-layers-toggle');
+            // toggle Collapsed/Expanded and apply new Layers List height
+            toggleLayerControl.addEventListener('click', function() {
+                if (isLayersListExpanded) {
+                    controlLayersElement.classList.remove('leaflet-control-layers-expanded');
+                } else {
+                    controlLayersElement.classList.add('leaflet-control-layers-expanded');
+                }
+                isLayersListExpanded = !isLayersListExpanded;
+                newLayersListHeight()
+            });	
+			// apply new Layers List height if toggle layerstree
+			if (controlLayersElement) {
+				controlLayersElement.addEventListener('click', function(event) {
+					var toggleLayerHeaderPointer = event.target.closest('.leaflet-layerstree-header-pointer span');
+					if (toggleLayerHeaderPointer) {
+						newLayersListHeight();
+					}
+				});
+			}
+            // Collapsed/Expanded at Start to apply new height
+            setTimeout(function() {
+                toggleLayerControl.click();
+            }, 10);
+            setTimeout(function() {
+                toggleLayerControl.click();
+            }, 10);
+            // Collapsed touch/small screen
+            var isSmallScreen = window.innerWidth < 650;
+            if (isSmallScreen) {
+                setTimeout(function() {
+                    controlLayersElement.classList.remove('leaflet-control-layers-expanded');
+                    isLayersListExpanded = !isLayersListExpanded;
+                }, 500);
+            }  
+        });       
         setBounds();
         var i = 0;
         layer_territory_1_T_1.eachLayer(function(layer) {
