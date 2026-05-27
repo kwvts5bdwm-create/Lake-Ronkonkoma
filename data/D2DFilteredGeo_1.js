@@ -1,1 +1,0 @@
-var json_D2DFilteredGeo_1 = {"type":"FeatureCollection","name":"D2DFilteredGeo_1","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[]}
