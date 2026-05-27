@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="css/leaflet-measure.css">
         <style>
         #map {
-            width: 986px;
+            width: 933px;
             height: 734px;
         }
         </style>
@@ -37,12 +37,12 @@
         <script src="js/labels.js"></script>
         <script src="js/leaflet.photon.js"></script>
         <script src="js/leaflet-measure.js"></script>
-        <script src="data/D2D_1.js"></script>
+        <script src="data/D2DFilteredGeo_1.js"></script>
         <script src="data/LakeRonkonkomaNYUSA104216_2.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[40.79947144476917,-73.1307142127242],[40.83727771716795,-73.07989266622093]]);
+        }).fitBounds([[40.814938460478345,-73.13557420492175],[40.86727071717982,-73.06901500958149]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/qgis2web/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -135,7 +135,7 @@
         });
         layer_GoogleMaps_0;
         map.addLayer(layer_GoogleMaps_0);
-        function pop_D2D_1(feature, layer) {
+        function pop_D2DFilteredGeo_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -172,9 +172,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_D2D_1_0() {
+        function style_D2DFilteredGeo_1_0() {
             return {
-                pane: 'pane_D2D_1',
+                pane: 'pane_D2DFilteredGeo_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -183,24 +183,24 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(231,113,72,0.16862745098039217)',
-                interactive: true,
+                fillColor: 'rgba(231,113,72,0.14901960784313725)',
+                interactive: false,
             }
         }
-        map.createPane('pane_D2D_1');
-        map.getPane('pane_D2D_1').style.zIndex = 401;
-        map.getPane('pane_D2D_1').style['mix-blend-mode'] = 'normal';
-        var layer_D2D_1 = new L.geoJson(json_D2D_1, {
+        map.createPane('pane_D2DFilteredGeo_1');
+        map.getPane('pane_D2DFilteredGeo_1').style.zIndex = 401;
+        map.getPane('pane_D2DFilteredGeo_1').style['mix-blend-mode'] = 'normal';
+        var layer_D2DFilteredGeo_1 = new L.geoJson(json_D2DFilteredGeo_1, {
             attribution: '',
-            interactive: true,
-            dataVar: 'json_D2D_1',
-            layerName: 'layer_D2D_1',
-            pane: 'pane_D2D_1',
-            onEachFeature: pop_D2D_1,
-            style: style_D2D_1_0,
+            interactive: false,
+            dataVar: 'json_D2DFilteredGeo_1',
+            layerName: 'layer_D2DFilteredGeo_1',
+            pane: 'pane_D2DFilteredGeo_1',
+            onEachFeature: pop_D2DFilteredGeo_1,
+            style: style_D2DFilteredGeo_1_0,
         });
-        bounds_group.addLayer(layer_D2D_1);
-        map.addLayer(layer_D2D_1);
+        bounds_group.addLayer(layer_D2DFilteredGeo_1);
+        map.addLayer(layer_D2DFilteredGeo_1);
         function pop_LakeRonkonkomaNYUSA104216_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -263,7 +263,7 @@
                 lineJoin: 'bevel',
                 weight: 4.0,
                 fillOpacity: 0,
-                interactive: true,
+                interactive: false,
             }
         }
         map.createPane('pane_LakeRonkonkomaNYUSA104216_2');
@@ -271,7 +271,7 @@
         map.getPane('pane_LakeRonkonkomaNYUSA104216_2').style['mix-blend-mode'] = 'normal';
         var layer_LakeRonkonkomaNYUSA104216_2 = new L.geoJson(json_LakeRonkonkomaNYUSA104216_2, {
             attribution: '',
-            interactive: true,
+            interactive: false,
             dataVar: 'json_LakeRonkonkomaNYUSA104216_2',
             layerName: 'layer_LakeRonkonkomaNYUSA104216_2',
             pane: 'pane_LakeRonkonkomaNYUSA104216_2',
@@ -336,7 +336,7 @@
         var overlaysTree = [
         {label: '<b>BOUNDARIES</b>',  selectAllCheckbox: true, children: [
             {label: '<img src="legend/LakeRonkonkomaNYUSA104216_2.png" /> Lake Ronkonkoma - NY (USA) (104216)', layer: layer_LakeRonkonkomaNYUSA104216_2},]},
-            {label: '<img src="legend/D2D_1.png" /> D2D', layer: layer_D2D_1},
+            {label: '<img src="legend/D2DFilteredGeo_1.png" /> D2D Filtered Geo', layer: layer_D2DFilteredGeo_1},
         {label: '<b>BASEMAP</b>',  selectAllCheckbox: true, children: [
             {label: "Google Maps", layer: layer_GoogleMaps_0, radioGroup: 'bm' },]},]
         var lay = L.control.layers.tree(null, overlaysTree,{
@@ -401,27 +401,27 @@
         });       
         setBounds();
         var i = 0;
-        layer_D2D_1.eachLayer(function(layer) {
+        layer_D2DFilteredGeo_1.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((exp_label_D2D_1_eval_expression(context) !== null?String('<div style="color: #323232; font-size: 30pt; font-family: \'Open Sans\', sans-serif;">' + exp_label_D2D_1_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_D2D_1'});
+            layer.bindTooltip((exp_label_D2DFilteredGeo_1_eval_expression(context) !== null?String('<div style="color: #323232; font-size: 15pt; font-weight: bold; font-family: \'Open Sans\', sans-serif;">' + exp_label_D2DFilteredGeo_1_eval_expression(context)) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_D2DFilteredGeo_1'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
               addLabel(layer, i);
               i++;
         });
-        resetLabels([layer_D2D_1]);
+        resetLabels([layer_D2DFilteredGeo_1]);
         map.on("zoomend", function(){
-            resetLabels([layer_D2D_1]);
+            resetLabels([layer_D2DFilteredGeo_1]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_D2D_1]);
+            resetLabels([layer_D2DFilteredGeo_1]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_D2D_1]);
+            resetLabels([layer_D2DFilteredGeo_1]);
         });
         </script>
     </body>
