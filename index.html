@@ -144,7 +144,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[40.79773201957728,-73.12190371199722],[40.81738100766951,-73.09574051269715]]);
+        }).fitBounds([[40.80697156404555,-73.13610203356862],[40.826620552137776,-73.10993883426855]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/qgis2web/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -226,17 +226,17 @@
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
         }
-        map.createPane('pane_GoogleRoads_0');
-        map.getPane('pane_GoogleRoads_0').style.zIndex = 400;
-        var layer_GoogleRoads_0 = L.tileLayer('https://mt1.google.com/vt/lyrs=h&x={x}&y={y}&z={z}', {
-            pane: 'pane_GoogleRoads_0',
+        map.createPane('pane_GoogleMaps_0');
+        map.getPane('pane_GoogleMaps_0').style.zIndex = 400;
+        var layer_GoogleMaps_0 = L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+            pane: 'pane_GoogleMaps_0',
             opacity: 1.0,
             attribution: '',
             minZoom: 1,
             maxZoom: 28,
         });
-        layer_GoogleRoads_0;
-        map.addLayer(layer_GoogleRoads_0);
+        layer_GoogleMaps_0;
+        map.addLayer(layer_GoogleMaps_0);
         function pop_territory_1_T_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
