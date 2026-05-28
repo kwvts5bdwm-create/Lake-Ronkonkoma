@@ -11,7 +11,6 @@
         <link rel="stylesheet" href="css/L.Control.Locate.min.css">
         <link rel="stylesheet" href="css/qgis2web.css">
         <link rel="stylesheet" href="css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="css/leaflet-search.css">
         <link rel="stylesheet" href="css/leaflet.photon.css">
         <link rel="stylesheet" href="css/leaflet-measure.css">
         <style>
@@ -40,7 +39,6 @@
         <script src="js/labels.js"></script>
         <script src="js/leaflet.photon.js"></script>
         <script src="js/leaflet-measure.js"></script>
-        <script src="js/leaflet-search.js"></script>
         <script src="data/MergedTerritory_3.js"></script>
         <script src="data/territory_1_B_4.js"></script>
         <script src="data/territory_2_B_5.js"></script>
@@ -67,7 +65,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:17, minZoom:15
-        }).fitBounds([[40.82980493882028,-73.14341072199532],[40.84434457087766,-73.11949580806488]]);
+        }).fitBounds([[40.8249146865154,-73.11011002553352],[40.82796897003725,-73.10508631329267]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/qgis2web/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -149,26 +147,16 @@
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
         }
-        map.createPane('pane_GoogleSatelliteHybrid_0');
-        map.getPane('pane_GoogleSatelliteHybrid_0').style.zIndex = 400;
-        var layer_GoogleSatelliteHybrid_0 = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
-            pane: 'pane_GoogleSatelliteHybrid_0',
+        map.createPane('pane_GoogleSatelliteHybrid_1');
+        map.getPane('pane_GoogleSatelliteHybrid_1').style.zIndex = 401;
+        var layer_GoogleSatelliteHybrid_1 = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
+            pane: 'pane_GoogleSatelliteHybrid_1',
             opacity: 1.0,
             attribution: '',
             minZoom: 15,
             maxZoom: 17,
         });
-        layer_GoogleSatelliteHybrid_0;
-        map.createPane('pane_GoogleRoads_1');
-        map.getPane('pane_GoogleRoads_1').style.zIndex = 401;
-        var layer_GoogleRoads_1 = L.tileLayer('https://mt1.google.com/vt/lyrs=h&x={x}&y={y}&z={z}', {
-            pane: 'pane_GoogleRoads_1',
-            opacity: 1.0,
-            attribution: '',
-            minZoom: 15,
-            maxZoom: 17,
-        });
-        layer_GoogleRoads_1;
+        layer_GoogleSatelliteHybrid_1;
         map.createPane('pane_GoogleMaps_2');
         map.getPane('pane_GoogleMaps_2').style.zIndex = 402;
         var layer_GoogleMaps_2 = L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
@@ -1263,16 +1251,7 @@
                         <td colspan="2"><strong>locality</strong><br />' + (feature.properties['locality'] !== null ? autolinker.link(String(feature.properties['locality']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>business</strong><br />' + (feature.properties['business'] !== null ? autolinker.link(String(feature.properties['business']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <td colspan="2"><strong>notes</strong><br />' + (feature.properties['notes'] !== null ? autolinker.link(String(feature.properties['notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2"><strong>disabled</strong><br />' + (feature.properties['disabled'] !== null ? autolinker.link(String(feature.properties['disabled']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2"><strong>tags</strong><br />' + (feature.properties['tags'] !== null ? autolinker.link(String(feature.properties['tags']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -1549,9 +1528,9 @@
             }
         });
         var overlaysTree = [
-        {label: '<b>BOUNDARIES</b>', collapsed: true, selectAllCheckbox: true, children: [
+        {label: '<b>BOUNDARIES</b>',  selectAllCheckbox: true, children: [
             {label: '<img src="legend/LakeRonkonkomaNYUSA104216_25.png" /> Lake Ronkonkoma - NY (USA) (104216)', layer: layer_LakeRonkonkomaNYUSA104216_25},]},
-        {label: '<b>Business</b>', collapsed: true, selectAllCheckbox: true, children: [
+        {label: '<b>Business</b>',  selectAllCheckbox: true, children: [
             {label: '<img src="legend/territory_22b_B_24.png" /> territory_22(b)_B', layer: layer_territory_22b_B_24},
             {label: '<img src="legend/territory_22a_B_23.png" /> territory_22(a)_B', layer: layer_territory_22a_B_23},
             {label: '<img src="legend/territory_21c_B_22.png" /> territory_21(c)_B', layer: layer_territory_21c_B_22},
@@ -1573,12 +1552,11 @@
             {label: '<img src="legend/territory_8_B_6.png" /> territory_8_B', layer: layer_territory_8_B_6},
             {label: '<img src="legend/territory_2_B_5.png" /> territory_2_B', layer: layer_territory_2_B_5},
             {label: '<img src="legend/territory_1_B_4.png" /> territory_1_B', layer: layer_territory_1_B_4},]},
-        {label: '<b>Door To Door</b>', collapsed: true, selectAllCheckbox: true, children: [
+        {label: '<b>Door To Door</b>',  selectAllCheckbox: true, children: [
             {label: '<img src="legend/MergedTerritory_3.png" /> MergedTerritory', layer: layer_MergedTerritory_3},]},
         {label: '<b>BASEMAP</b>',  selectAllCheckbox: true, children: [
             {label: "Google Maps", layer: layer_GoogleMaps_2, radioGroup: 'bm' },
-            {label: "Google Roads", layer: layer_GoogleRoads_1, radioGroup: 'bm' },
-            {label: "Google Satellite Hybrid", layer: layer_GoogleSatelliteHybrid_0, radioGroup: 'bm' },]},]
+            {label: "Google Satellite Hybrid", layer: layer_GoogleSatelliteHybrid_1, radioGroup: 'bm' },]},]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
             //selectorBack: false,
@@ -1876,16 +1854,6 @@
               addLabel(layer, i);
               i++;
         });
-        map.addControl(new L.Control.Search({
-            layer: layer_LakeRonkonkomaNYUSA104216_25,
-            initial: false,
-            hideMarkerOnCollapse: true,
-            propertyName: 'Name'}));
-        if (typeof url === 'undefined') {
-            document.getElementsByClassName('search-button')[0].className += ' fa fa-binoculars';
-        } else {
-            document.getElementsByClassName('search-button')[1].className += ' fa fa-binoculars';
-        }
         resetLabels([layer_MergedTerritory_3,layer_territory_1_B_4,layer_territory_2_B_5,layer_territory_8_B_6,layer_territory_9_B_7,layer_territory_10_B_8,layer_territory_11_B_9,layer_territory_12_B_10,layer_territory_13_B_11,layer_territory_14_B_12,layer_territory_15_B_13,layer_territory_16_B_14,layer_territory_17_B_15,layer_territory_18a_B_16,layer_territory_18b_B_17,layer_territory_19_B_18,layer_territory_20_B_19,layer_territory_21a_B_20,layer_territory_21b_B_21,layer_territory_21c_B_22,layer_territory_22a_B_23,layer_territory_22b_B_24]);
         map.on("zoomend", function(){
             resetLabels([layer_MergedTerritory_3,layer_territory_1_B_4,layer_territory_2_B_5,layer_territory_8_B_6,layer_territory_9_B_7,layer_territory_10_B_8,layer_territory_11_B_9,layer_territory_12_B_10,layer_territory_13_B_11,layer_territory_14_B_12,layer_territory_15_B_13,layer_territory_16_B_14,layer_territory_17_B_15,layer_territory_18a_B_16,layer_territory_18b_B_17,layer_territory_19_B_18,layer_territory_20_B_19,layer_territory_21a_B_20,layer_territory_21b_B_21,layer_territory_21c_B_22,layer_territory_22a_B_23,layer_territory_22b_B_24]);
